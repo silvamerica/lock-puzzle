@@ -5,14 +5,17 @@
         blockSize = 40,
         blocks = [],
         blockClasses = ['puzzle-block-left', 'puzzle-block-top', 'puzzle-block-right', 'puzzle-block-bottom'],
+        blockStrengths = ['puzzle-block-low', 'puzzle-block-med', 'puzzle-block-high'],
         puzzleBlockTemplate = '<div class="puzzle-block"><div></div></div>',
         swapChain = [];
 
     function PuzzleBlock(options) {
         this.class = options.class;
+        this.strength = options.strength;
         this.isHiddenBlock = false;
         this.$el = $(template(puzzleBlockTemplate, options));
         this.$el.addClass(this.class);
+        this.$el.addClass(this.strength);
         this.moveTo(options.x, options.y);
         var me = this;
         this.$el.on('dblclick', function() {
@@ -86,7 +89,8 @@
                 puzzleBlock = new PuzzleBlock({
                     x: x,
                     y: y,
-                    class: blockClasses[Math.floor(Math.random()*blockClasses.length)]
+                    class: blockClasses[Math.floor(Math.random()*blockClasses.length)],
+                    strength: blockStrengths[Math.floor(Math.random()*blockStrengths.length)],
                 });
                 if (x === hiddenBlockIndex.x && y === hiddenBlockIndex.y) {
                     puzzleBlock.isHiddenBlock = true;

@@ -43,3 +43,15 @@ body, html {
 .puzzle-block-right {
     transform: rotate(270deg);
 }
+.puzzle-block-bottom {
+    /* Default */
+}
+.puzzle-block-low div {
+    border-bottom-color: rgba(255, 0, 0, 0.25);
+}
+.puzzle-block-med div {
+    border-bottom-color: rgba(255, 0, 0, 0.66);
+}
+.puzzle-block-high div {
+    /* Default */
+}
