@@ -7,7 +7,9 @@ body, html {
 .hidden {
 	display: none;
 }
-
+.hidden-block div {
+    visibility: hidden;
+}
 .puzzle {
     border: 1px solid red;
     width: 240px;
