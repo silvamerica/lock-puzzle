@@ -3,19 +3,29 @@ body, html {
 	padding: 0;
     background: #000;
     overflow: hidden;
+    color: rgb(255, 0 , 0);
+    font-family: Helvetica, Arial, sans-serif;
 }
-.hidden {
-	display: none;
+body, html, div {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-.hidden-block div {
-    visibility: hidden;
+body {
+    padding-top: 10px;
 }
-.puzzle {
+.puzzle-container {
+    margin: 0 auto;
+    text-align: center;
+}
+.puzzle, .puzzle-answer {
     border: 1px solid red;
-    width: 240px;
-    height: 240px;
-    margin: 10px auto;
+    margin: 10px 20px;
     position: relative;
+    display: inline-block;
 }
 .puzzle-block {
     width: 40px;
